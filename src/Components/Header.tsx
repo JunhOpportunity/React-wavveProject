@@ -51,12 +51,13 @@ const Items = styled.ul`
 const Item = styled.li`
   font-size: 20px;
   color: ${(props) => props.color};
+  font-weight: bold;
 `;
 
 const Search = styled.div`
   width: 50px;
   height: 15px;
-  fill: white;
+  fill: #696969;
 `;
 
 // 현재 주소=? : true => white, false => #696969
@@ -79,17 +80,20 @@ export default function Navbar() {
               />
             </Logo>
             <Items>
-              <Item color={isHome != null ? "White" : "gray"}>
+              <Item color={isHome != null ? "White" : "#696969"}>
                 <Link to="/">홈</Link>
               </Item>
-              <Item color={isCategory != null ? "White" : "gray"}>
+              <Item color={isCategory != null ? "White" : "#696969"}>
                 <Link to="/category">카테고리</Link>
               </Item>
-              <Item color={isLive != null ? "White" : "gray"}>
+              <Item color={isLive != null ? "White" : "#696969"}>
                 <Link to="live">Live</Link>
               </Item>
-              <Item color={isMy != null ? "White" : "gray"}>
+              <Item color={isMy != null ? "White" : "#696969"}>
                 <Link to="my">My</Link>
+              </Item>
+              <Item color={"red"}>
+                <Link to="test">TEST-Page</Link>
               </Item>
             </Items>
           </Col>

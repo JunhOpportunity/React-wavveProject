@@ -1,16 +1,19 @@
 {
-  "name": "wavve-project",
+  "name": "react-wavve-project",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "@types/react-slick": "0.23.10",
     "@types/styled-components": "5.1.26",
     "framer-motion": "7.4.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-router-dom": "6.4.1",
     "react-scripts": "4.0.0",
+    "react-slick": "0.29.0",
+    "slick-carousel": "1.8.1",
     "styled-components": "5.3.6"
   },
   "devDependencies": {
