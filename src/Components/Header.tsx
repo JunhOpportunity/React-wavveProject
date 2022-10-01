@@ -74,16 +74,17 @@ export default function Navbar() {
           <Col>
             <Logo>
               <Img
+                style={{ fill: "red" }}
                 onClick={logoClick}
                 src="	https://www.wavve.com/img/ci-wavve.5b304973.svg"
               />
             </Logo>
             <Items>
               <Item color={isHome != null ? "White" : "#696969"}>
-                <Link to="/">홈</Link>
+                <Link to="/">Home</Link>
               </Item>
               <Item color={isCategory != null ? "White" : "#696969"}>
-                <Link to="/category">카테고리</Link>
+                <Link to="/category">Category</Link>
               </Item>
               <Item color={isLive != null ? "White" : "#696969"}>
                 <Link to="live">Live</Link>
@@ -97,13 +98,15 @@ export default function Navbar() {
             </Items>
           </Col>
           <Search>
-            <svg>
-              <path
-                fillRule="evenodd"
-                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                clipRule="evenodd"
-              ></path>
-            </svg>
+            <Link to="search">
+              <svg>
+                <path
+                  fillRule="evenodd"
+                  d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+            </Link>
           </Search>
         </HeadBundle>
       </Nav>
