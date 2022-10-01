@@ -1,10 +1,7 @@
 import React, { Component } from "react";
-import styled from "styled-components";
 import Slider from "react-slick";
-const SliderTitle = styled.h2`
-  padding: 60px;
-  text-align: center;
-`;
+import styled from "styled-components";
+
 const NextTo = styled.div`
   width: 30px;
   height: 30px;
@@ -29,17 +26,15 @@ const Pre = styled.div`
   }
 `;
 
-export default class SimpleSlider extends Component {
+export default class Responsive extends Component {
   render() {
-    const settings = {
-      dots: true,
+    var settings = {
+      dots: false,
       infinite: true,
-      speed: 400,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 4000,
-      pauseOnHover: false,
+      speed: 500,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      initialSlide: 0,
       nextArrow: (
         <NextTo>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
@@ -53,12 +48,36 @@ export default class SimpleSlider extends Component {
             <path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
           </svg>
         </Pre>
-      )
+      ),
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     };
-
     return (
       <div>
-        <h2> Single Item</h2>
         <Slider {...settings}>
           <div>
             <h3>1</h3>
@@ -77,6 +96,12 @@ export default class SimpleSlider extends Component {
           </div>
           <div>
             <h3>6</h3>
+          </div>
+          <div>
+            <h3>7</h3>
+          </div>
+          <div>
+            <h3>8</h3>
           </div>
         </Slider>
       </div>

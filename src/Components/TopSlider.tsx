@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const Slider = styled(motion.div)``;
 
@@ -12,6 +13,8 @@ const Row = styled(motion.div)`
 `;
 
 const Box = styled(motion.div)`
+  /* background-size: cover;
+  background-position: center center; */
   width: 1240px;
   height: 508px;
   background-color: gray;

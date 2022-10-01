@@ -9,7 +9,6 @@ const Nav = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px white solid;
   z-index: 99;
 `;
 
@@ -92,9 +91,9 @@ export default function Navbar() {
               <Item color={isMy != null ? "White" : "#696969"}>
                 <Link to="my">My</Link>
               </Item>
-              <Item color={"red"}>
+              {/* <Item color={"red"}>
                 <Link to="test">TEST-Page</Link>
-              </Item>
+              </Item> */}
             </Items>
           </Col>
           <Search>
