@@ -18,12 +18,6 @@ const Notice = styled.div`
   align-items: center;
 `;
 
-const Slide = styled.div`
-  font-size: 20px;
-  color: gray;
-  font-weight: bold;
-`;
-
 const Title = styled.div`
   font-size: 20px;
   color: gray;
